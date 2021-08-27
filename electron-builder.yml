@@ -1,0 +1,12 @@
+appId: com.electron.app
+productName: Electron App
+copyright: Copyright © 2021 Richie Bendall
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null

@@ -1,0 +1,43 @@
+{
+	"name": "electron-app",
+	"version": "0.0.0",
+	"private": true,
+	"main": "app/background.js",
+	"scripts": {
+		"dev": "nextron",
+		"build": "nextron build",
+		"lint": "xo",
+		"postinstall": "electron-builder install-app-deps"
+	},
+	"dependencies": {
+		"electron-debug": "^3.2.0",
+		"electron-is-dev": "^2.0.0",
+		"electron-serve": "^1.1.0",
+		"electron-store": "^8.0.0",
+		"modern-normalize": "^1.1.0",
+		"sass": "^1.38.1"
+	},
+	"devDependencies": {
+		"@types/node": "^16.6.1",
+		"@types/react": "^17.0.17",
+		"electron": "^13.2.2",
+		"electron-builder": "^22.11.7",
+		"eslint-config-richienb": "^0.7.0",
+		"next": "^11.1.0",
+		"nextron": "^7.0.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"typescript": "^4.4.2",
+		"xo": "^0.44.0"
+	},
+	"xo": {
+		"extends": "richienb/next",
+		"rules": {
+			"node/prefer-global/process": "off",
+			"@next/next/no-html-link-for-pages": [
+				"error",
+				"renderer/pages/"
+			]
+		}
+	}
+}
